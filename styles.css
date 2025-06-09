@@ -33,6 +33,15 @@ body {
     margin: 0 auto;
 }
 
+.container_2 {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+}
+
 a {
     text-decoration: none;
     color: var(--white);
@@ -48,7 +57,9 @@ h2{font-size: 3.5rem;}
 h3{font-size: 3rem;}
 h4{font-size: 2.5rem;}
 
-img {max-width: 100%;}
+img{max-width: 100%;}
+
+ul{list-style: none;}
 
 /** Utilities **/
 
@@ -87,6 +98,48 @@ header {
     justify-content: center;
     align-items: center;
     margin: 13rem auto;
+}
+
+/* Main */
+.blog {
+    padding: 2rem 0;
+}
+
+.info-blog {
+    margin-bottom: 4rem;
+}
+
+.text-blog {
+    padding-bottom: 2rem;
+}
+
+/* Side Bar */
+.sidebar {
+    padding: 2rem 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 4rem;
+    line-height: 6rem;
+}
+
+.titles-h3 {
+    padding: 2rem 0 4rem 0;
+}
+
+.titles-h4 {
+    padding: 1rem 0;
+}
+
+.button-blog {
+    padding: 2.5rem;
+    background-color: var(--black);
+}
+
+.button-sidebar {
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: var(--primary);
 }
 
 /* Footer */
