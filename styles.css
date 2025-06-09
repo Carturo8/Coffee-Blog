@@ -1,4 +1,7 @@
-/* Custom properties */
+/* ================================
+   Root Variables and Global Reset
+=================================== */
+
 :root {
     --font-heading: 'PT Sans', sans-serif;
     --font-paragraphs: 'Open Sans', sans-serif;
@@ -8,15 +11,16 @@
     --black: #000;
 }
 
-/* Global reset */
+/* Reset margins and paddings */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
 }
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62.5%; /* 1rem = 10px for easier rem scaling */
 }
 
 body {
@@ -25,49 +29,61 @@ body {
     line-height: 2;
 }
 
-/** Globals **/
-
-.container {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.container_2 {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 5rem;
-}
-
-a {
-    text-decoration: none;
-    color: var(--white);
-}
+/* ======================
+   Typography and Layout
+======================== */
 
 h1, h2, h3, h4 {
     font-family: var(--font-heading), sans-serif;
     line-height: 1.2;
 }
 
-h1{font-size: 4.5rem;}
-h2{font-size: 3.5rem;}
-h3{font-size: 3rem;}
-h4{font-size: 2.5rem;}
+h1 { font-size: 4.5rem; }
+h2 { font-size: 3.5rem; }
+h3 { font-size: 3rem; }
+h4 { font-size: 2.5rem; }
 
-img{max-width: 100%;}
+a {
+    text-decoration: none;
+    color: var(--white);
+}
 
-ul{list-style: none;}
+img {
+    max-width: 100%;
+}
 
-/** Utilities **/
+ul {
+    list-style: none;
+}
 
-.no-margin {margin: 0;}
-.no-padding {padding: 0;}
-.center-text {text-align: center;}
+/* ==========================
+   Utility and Helper Classes
+=========================== */
 
-/* Header */
+.no-margin { margin: 0; }
+.no-padding { padding: 0; }
+.center-text { text-align: center; }
+
+/* ====================
+   Layout Containers
+==================== */
+
+.container, .container_2 {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container_2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+}
+
+/* ====================
+   Header and Nav Bar
+==================== */
+
 header {
     height: 60rem;
     background-image: url(./img/banner.webp);
@@ -85,13 +101,24 @@ header {
     padding: 3rem 0;
 }
 
-.top-bar h1 {font-weight: lighter;}
-.top-bar span {font-weight: bold;}
+.top-bar h1 {
+    font-weight: lighter;
+}
+
+.top-bar span {
+    font-weight: bold;
+}
 
 /* Navigation */
-.navigation {font-size: 1.9rem;}
-.navigation a {padding-right: 3rem;}
+.navigation {
+    font-size: 1.9rem;
+}
 
+.navigation a {
+    padding-right: 3rem;
+}
+
+/* Header Text */
 .text-header {
     display: flex;
     flex-direction: column;
@@ -100,7 +127,10 @@ header {
     margin: 13rem auto;
 }
 
-/* Main */
+/* ====================
+   Main Blog Section
+==================== */
+
 .blog {
     padding: 2rem 0;
 }
@@ -113,7 +143,10 @@ header {
     padding-bottom: 2rem;
 }
 
-/* Side Bar */
+/* ====================
+   Sidebar Section
+==================== */
+
 .sidebar {
     padding: 2rem 0;
 }
@@ -123,6 +156,10 @@ header {
     line-height: 6rem;
 }
 
+/* ====================
+   Shared Titles
+==================== */
+
 .titles-h3 {
     padding: 2rem 0 4rem 0;
 }
@@ -130,6 +167,10 @@ header {
 .titles-h4 {
     padding: 1rem 0;
 }
+
+/* ====================
+   Buttons
+==================== */
 
 .button-blog {
     padding: 2.5rem;
@@ -142,7 +183,10 @@ header {
     background-color: var(--primary);
 }
 
-/* Footer */
+/* ====================
+   Footer
+==================== */
+
 footer {
     background-color: var(--black);
 }
